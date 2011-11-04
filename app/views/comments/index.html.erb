@@ -1,0 +1,32 @@
+<% if flash[:notice] %>
+<div class="notice"><%= raw flash[:notice] %></div>
+<% end %>
+<% if flash[:error] %>
+<div class="error"><%= flash[:error] %></div>
+<% end %>
+
+<div class="content-wrapper">
+	<h1>Les Commentaires</h1>
+	<% @comments.each do |c| %>
+		<div class="commentaire">
+			<img src="<%= gravatar(c.email, 'http://www.iconfinder.com/ajax/download/png/?id=6132&s=128') %>" alt="<%= c.name %>" class="avatar">
+			<div class="auteur">
+				<span class="nom"><%= c.name %></span>
+				<span class="date"><%= c.created_at.strftime('Le %d/%m/%Y à %H:%M:%S') %></span>
+			</div>
+			<p class="message">
+				<%= c.message %>
+			</p>
+		</div>
+	<% end %>
+</div>
+
+<div class="content-wrapper">
+	<h1>Envoyer un commentaire</h1>
+	<%= form_tag :controller => 'comments', :action => 'create', :method => 'post' do %>
+		<%= text_field_tag :name, '', :placeholder => "Nom" %>
+		<%= text_field_tag :email, '', :placeholder => "Email" %>
+		<%= text_area_tag :message, '', :placeholder => "Commentaire" %>
+		<%= submit_tag 'Envoyer' %>
+	<% end %>
+</div>

@@ -1,0 +1,76 @@
+body{
+	background: #f5f5f5;
+}
+.container {
+	font-family: arial;
+	font-size: 12px;
+	width: 940px;
+	padding: 10px;
+	margin: 0 auto;
+}
+.content-wrapper{
+	padding: 20px;
+	background: white;
+	border: 1px solid #EEE;
+	margin-bottom: 25px;
+}
+.commentaire{
+	width: 600px;
+	min-height: 80px;
+	margin-bottom: 15px;
+	padding: 10px;
+	background: #f5f5f5;
+	border: 1px solid #EEE;
+	clear:both;
+}
+.avatar{
+	width: 80px;
+	height: 80px;
+	float:left;
+	margin-right: 10px;
+}
+.nom{
+	font-size: 15px;
+	color: #333;
+	margin-right: 15px;
+	font-weight: bold;
+}
+.date{
+	font-size: 11px;
+	font-style: italic;
+	color: #666;
+}
+input, textarea{
+	display: block;
+	padding: 5px;
+	border: 1px solid #CCC;
+	margin-bottom: 10px;
+}
+input[type=text]{
+	width: 300px;
+}
+textarea{
+	width: 600px;
+	height: 250px;
+}
+input[type=submit]{
+	padding: 5px;
+	cursor: pointer;
+}
+/*-----Messages d'alerte-----*/
+.notice, .error{
+	margin-bottom: 10px;
+	padding: 10px;
+	color: white;
+	font-weight: bold;	
+}
+.notice{
+	background: #bada55;
+	border:1px solid green;
+	color: black;
+}
+.error{
+	background: #FF1234;
+	border:1px solid #CC0E29;
+}
+
